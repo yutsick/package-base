@@ -1,13 +1,13 @@
 
-let project_folder = "dict";
+let project_folder = "dist";
 let source_folder = "src";
-let wp_folder = "../css/";
+//let wp_folder = "../css/";
 
 let path = {
   build: {
     html: project_folder + "/",
     css: project_folder + "/css/",
-    wp_css: wp_folder,
+//    wp_css: wp_folder,
     js: project_folder + "/js/",
     img: project_folder + "/img/",
     fonts: project_folder + "/fonts/"
@@ -83,7 +83,7 @@ function css() {
       })
     )
     .pipe(dest(path.build.css))
-    .pipe(dest(path.build.wp_css))
+  // .pipe(dest(path.build.wp_css))
     .pipe(browsersync.stream());
 }
 
